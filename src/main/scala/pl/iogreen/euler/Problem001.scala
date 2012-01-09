@@ -1,6 +1,6 @@
 package pl.iogreen.euler
 
-class Problem01 {
+class Problem001 {
 
   def resolve(n: Int): Int = {
     (getMultipliers(n, 3) ::: getMultipliers(n, 5)).distinct.sum

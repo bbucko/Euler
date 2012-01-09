@@ -5,9 +5,9 @@ import org.scalatest.junit.JUnitRunner
 import org.junit.runner.RunWith
 
 @RunWith(classOf[JUnitRunner])
-class Problem01Test extends FunSuite {
+class Problem001Test extends FunSuite {
 
-  val resolver = new Problem01
+  val resolver = new Problem001
 
   test("test finding multipliers") {
     assert(resolver.getMultipliers(10, 3) === List(3, 6, 9))
