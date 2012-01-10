@@ -5,12 +5,13 @@ import collection.mutable.ListBuffer
 class Problem002 {
 
   def resolve(maxValue: Int): Int = {
-    fibonacci(maxValue).filter(isEven(_)).sum
+    //    fibonacci(maxValue).filter(isEven(_)).sum
+    betterFibonacci(maxValue).filter(isEven(_)).sum
   }
 
   def fibonacci(maxValue: Int): List[Int] = {
-    val foundFibonacci = ListBuffer[Int]()
-    var nValue = 0
+    val foundFibonacci = ListBuffer[Int](0, 1)
+    var nValue = 1
     var nPlusOneValue = 1
 
     while (nValue < maxValue) {
@@ -21,6 +22,13 @@ class Problem002 {
     }
 
     foundFibonacci.drop(2).toList
+  }
+
+  def betterFibonacci(maxValue: Int): List[Int] = {
+    def fib(a: Int = 0, b: Int = 1): Stream[Int] = {
+      Stream.cons(a, fib(b, a + b))
+    }
+    fib().takeWhile(_ < maxValue).toList.drop(2)
   }
 
   def isEven(n: Int): Boolean = {
