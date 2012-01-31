@@ -30,4 +30,11 @@ class Problem007Test extends FunSuite {
     assert(resolver.resolve(10001) === 104743)
   }
 
+  test("test stream") {
+    assert(resolver.nextPrime().take(3).toList === List(2, 3, 5))
+    assert(resolver.nextPrime().take(5).toList === List(2, 3, 5, 7, 11))
+    assert(resolver.nextPrime().take(10001).toList.reverse.head === 104743)
+    assert(resolver.nextPrime().take(100001).toList.reverse.head === 1299721)
+    assert(resolver.nextPrime().take(1000001).toList.reverse.head === 15485867)
+  }
 }

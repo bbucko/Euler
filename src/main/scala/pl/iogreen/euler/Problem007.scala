@@ -58,6 +58,20 @@ class Problem007 {
     true
   }
 
+  def getNextPrime(i: Int): Int = {
+    var n = i
+    while (true) {
+      n += 1
+      if (isPrime(n)) {
+        return n
+      }
+    }
+    n
+  }
+
+  def nextPrime(a: Int = 2): Stream[Int] = Stream.cons(a, nextPrime(getNextPrime(a)))
+
+
   def resolve(n: Int): Int = {
     var primeCount = 1
     var lastNumber = 2
