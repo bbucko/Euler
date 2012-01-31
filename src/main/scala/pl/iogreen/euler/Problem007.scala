@@ -58,7 +58,7 @@ class Problem007 {
     true
   }
 
-  def getNextPrime(i: Int): Int = {
+  def getNextPrime(i: Long): Long = {
     var n = i
     while (true) {
       n += 1
@@ -69,7 +69,7 @@ class Problem007 {
     n
   }
 
-  def nextPrime(a: Int = 2): Stream[Int] = Stream.cons(a, nextPrime(getNextPrime(a)))
+  def nextPrime(a: Long = 2): Stream[Long] = Stream.cons(a, nextPrime(getNextPrime(a)))
 
 
   def resolve(n: Int): Int = {
