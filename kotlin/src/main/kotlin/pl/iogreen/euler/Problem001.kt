@@ -1,4 +1,4 @@
-package pl.iogreen.euler.first
+package pl.iogreen.euler.kotlin
 
 public class Problem001 {
 

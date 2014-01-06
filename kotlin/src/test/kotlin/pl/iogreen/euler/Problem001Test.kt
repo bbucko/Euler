@@ -1,4 +1,4 @@
-package pl.iogreen.euler.first
+package pl.iogreen.euler.kotlin
 
 import org.junit.Test
 import kotlin.test.assertEquals
