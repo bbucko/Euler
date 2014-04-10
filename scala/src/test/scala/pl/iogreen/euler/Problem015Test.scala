@@ -14,6 +14,7 @@ class Problem015Test extends FunSuite {
     assert(resolver.resolve(5) === 252)
     assert(resolver.resolve(10) === 184756)
     assert(resolver.resolve(20) === BigInt("137846528820"))
+    assert(BigInt(2).pow(1000).toString().map(_.toInt - 48).par.sum === 1366)
   }
 
 }
