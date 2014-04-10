@@ -13,6 +13,7 @@ class Problem004 {
       for (j <- min to max) {
         val result = i * j
         if (isPalindrom(result.toString) && result > maxValue) {
+          println(s"$i :: $j")
           maxValue = result
         }
       }
