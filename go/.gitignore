@@ -2,3 +2,4 @@
 *.iml
 out
 atlassian-ide-plugin.xml
+target
